@@ -13,15 +13,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="font-poppins bg-gray-100 w-full h-full lg:flex lg:justify-center lg:items-start lg:mt-16 xl:mt-16">
-    <form class="mx-3 p-3 rounded-xl sm:mx-20 lg:flex  lg:w-5/6 xl:w-1/2 bg-white shadow-xl ">
+<body class="font-poppins bg-gray-100 w-full h-full lg:h-screen lg:flex lg:justify-center lg:items-center ">
+    <form class="container_form">
 
         <div class="container_calcular bg-gray-200">
             <h2 class="my-6 text-center text-2xl font-bold lg:my-2">Calcular contratos Antigos</h2>
 
             <label for="valor_multa_contratoAntigo" class="my-1">Valor da Multa:</label>
             <input type="number" id="valor_multa_contratoAntigo" value="600.60" class="input text-center input_number">
-            <label for="Porcentagem_fidelidade" class="mt-4">Selecione a quantia de meses Pago pelo Cliente:</label>
+            <label for="Porcentagem_fidelidade" class="mt-3">Selecione a quantia de meses Pago pelo Cliente:</label>
             <select id="Porcentagem_fidelidade" class="input text-center">
                 <option value="">Selecione o mês</option>
                 <option value="90">1 mês - 90%</option>
@@ -43,17 +43,18 @@
             <div class="h-40 lg:h-20">
                 <span id="tilulo_historico_contratoAntigo" class="text-lg font-bold text-center"></span>
                 <span id="texto_paraHistorico_contratoAntigo"></span>
+                <!-- <p>Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.</p> -->
             </div>
         </div>
 
-        <div class="container_calcular lg:pb-10">
+        <div class="container_calcular bg-white">
             <h2 class="my-6 text-center text-2xl font-bold lg:my-2">Calcular contratos Novos</h2>
         
             <label for="vtb_valor_multa_contratoNovo" class="my-1">Valor do Benefício do Cliente:</label>
             <input type="number" id="vtb_valor_multa_contratoNovo" value="600.60" class="input text-center input_number">
-            <label for="mes_fidelidade" class="mt-4">Número total dos meses de Fidelidade:</label>
+            <label for="mes_fidelidade" class="mt-3">Número total dos meses de Fidelidade:</label>
             <input type="number" id="mes_fidelidade" value="12" disabled class="input text-center cursor-not-allowed">
-            <label for="mr_mes_restante" class="mt-4">Selecione a quantidade de meses para encerrar a Fidelidade</label>
+            <label for="mr_mes_restante" class="mt-3">Selecione a quantidade de meses para encerrar a Fidelidade</label>
             <select id="mr_mes_restante" class="input text-center">
                 <option value="">Selecione o mês</option>
                 <option value="1">1 mes</option>
@@ -71,15 +72,15 @@
             </select>
             <button id="btn_calcular_contratoNovo" class="button">Calcular</button>
 
-            <div class="mb-6 h-60 flex flex-col lg:h-40">
+            <div class="h-60 flex flex-col lg:h-50">
                 
-                <div class="h-40 lg:h-20 lg:mt-2">
+                <div class="h-40 lg:h-0">
                     <span id="tilulo_historico_contratoNovo" class="text-lg font-bold text-center"></span>
                     <span id="texto_paraHistorico_contratoNovo"></span>
                 </div>
                 
                 <div>
-                    <h3 class="font-bold lg:mt-2">Fórmula:</h3>
+                    <h3 class="font-bold lg:mt-24">Fórmula:</h3>
                     <span>M = (VTB &#247; MF) &#215; MR</span>
                     <p id="resultado_formula" class="mt-2"></p>
                 </div>

@@ -56,7 +56,7 @@ btn_calcular_contratoAntigo.addEventListener('click', (event) => {
     const tilulo_historico_contratoAntigo = document.querySelector('#tilulo_historico_contratoAntigo');
     const texto_paraHistorico_contratoAntigo = document.querySelector('#texto_paraHistorico_contratoAntigo');
 
-    tilulo_historico_contratoAntigo.innerHTML = `<h4>Histórico para os boletos:</h4>`
+    tilulo_historico_contratoAntigo.innerHTML = `<h4 class="my-1">Histórico para os boletos:</h4>`
     texto_paraHistorico_contratoAntigo.innerHTML = `Gerar multa no valor de <strong>${formatarValor(resultado_multa_contratoAntigo)}</strong>, cliente usou ${idetificar_mes_fidelidade(Porcentagem_fidelidade.value)} meses - deverá arcar com uma <strong>multa de ${Porcentagem_fidelidade.value}%</strong> do total dos benefícios concedidos.`;
 });
 
@@ -71,7 +71,7 @@ btn_calcular_contratoNovo.addEventListener('click', (event) => {
     const texto_paraHistorico_contratoNovo = document.querySelector('#texto_paraHistorico_contratoNovo');
 
     //calculo de meses restantes
-    tilulo_historico_contratoNovo.innerHTML = `<h4>Histórico para os boletos:</h4>`
+    tilulo_historico_contratoNovo.innerHTML = `<h4 class="my-1">Histórico para os boletos:</h4>`
     texto_paraHistorico_contratoNovo.innerHTML = `<p>Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.</p>`
 
 

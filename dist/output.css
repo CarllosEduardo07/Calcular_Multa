@@ -540,6 +540,44 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container_form {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 640px) {
+  .container_form {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+  }
+}
+
+@media (min-width: 1024px) {
+  .container_form {
+    display: flex;
+    width: 83.333333%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container_form {
+    width: 60%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  }
+}
+
 /* tirar setar do input number */
 
 .input_number::-webkit-inner-spin-button {
@@ -568,8 +606,8 @@ video {
 }
 
 .button {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   border-radius: 0.75rem;
   border-width: 1px;
   border-style: solid;
@@ -605,11 +643,6 @@ video {
   }
 }
 
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -620,16 +653,16 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .flex {
@@ -660,27 +693,9 @@ video {
   flex-direction: column;
 }
 
-.rounded-none {
-  border-radius: 0px;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200 {
@@ -688,16 +703,9 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .text-center {
@@ -722,114 +730,37 @@ video {
   font-weight: 700;
 }
 
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 640px) {
-  .sm\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-}
-
 @media (min-width: 1024px) {
   .lg\:my-2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
-  .lg\:mt-1 {
-    margin-top: 0.25rem;
-  }
-
-  .lg\:mt-16 {
-    margin-top: 4rem;
+  .lg\:mt-24 {
+    margin-top: 6rem;
   }
 
   .lg\:flex {
     display: flex;
   }
 
+  .lg\:h-0 {
+    height: 0px;
+  }
+
   .lg\:h-20 {
     height: 5rem;
   }
 
-  .lg\:h-40 {
-    height: 10rem;
+  .lg\:h-screen {
+    height: 100vh;
   }
 
-  .lg\:w-5\/6 {
-    width: 83.333333%;
-  }
-
-  .lg\:items-start {
-    align-items: flex-start;
+  .lg\:items-center {
+    align-items: center;
   }
 
   .lg\:justify-center {
     justify-content: center;
-  }
-
-  .lg\:bg-red-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:mt-20 {
-    margin-top: 5rem;
-  }
-
-  .xl\:mt-16 {
-    margin-top: 4rem;
-  }
-
-  .xl\:w-3\/4 {
-    width: 75%;
-  }
-
-  .xl\:w-2 {
-    width: 0.5rem;
-  }
-
-  .xl\:w-2\/4 {
-    width: 50%;
-  }
-
-  .xl\:w-5\/6 {
-    width: 83.333333%;
-  }
-
-  .xl\:w-2\/3 {
-    width: 66.666667%;
-  }
-
-  .xl\:w-1\/2 {
-    width: 50%;
-  }
-
-  .xl\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .xl\:bg-blue-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
   }
 }

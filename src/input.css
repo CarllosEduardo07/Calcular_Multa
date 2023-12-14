@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer components{   
+
+    .container_form{
+        @apply mx-3 rounded-xl bg-white shadow-xl
+        /* sm:640px */
+        /* md:768px */
+        /* lg:1024px */
+        /* xl:1280px */
+        /* 2xl:1536px */
+        sm:bg-green-600 sm:mx-20 
+        lg:bg-orange-500 lg:flex lg:p-3  lg:w-5/6 
+        xl:bg-blue-500  xl:w-3/5 
+    }
+
     /* tirar setar do input number */
     .input_number::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -16,12 +29,14 @@
     }
 
     .button{
-        @apply p-1 my-4 border border-solid bg-gray-400 rounded-xl
+        @apply p-1 my-3 border border-solid bg-gray-400 rounded-xl
         hover:bg-gray-500 hover:shadow-lg border-none
     }
 
     .container_calcular{
-        @apply py-4 px-3 flex flex-col rounded-xl lg:mx-4 lg:w-2/4 
+        @apply py-4 px-3 flex flex-col rounded-xl lg:mx-4 lg:w-2/4
+        /* lg:w-1/2 */
+
     }
 
 }

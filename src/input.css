@@ -6,11 +6,14 @@
     .input {
         @apply p-1 border border-solid border-2 border-gray-400 outline-none rounded-xl
 
-        sm:bg-red-600
     }
 
     .button{
         @apply p-1 my-4 border border-solid bg-gray-400 rounded-xl
+    }
+
+    .container_calcular{
+        @apply py-4 px-3 flex flex-col rounded-xl lg:mx-4 lg:w-2/4
     }
 
 }

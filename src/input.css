@@ -3,17 +3,25 @@
 @tailwind utilities;
 
 @layer components{   
+    /* tirar setar do input number */
+    .input_number::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
     .input {
         @apply p-1 border border-solid border-2 border-gray-400 outline-none rounded-xl
-
+        cursor-pointer
+        hover:border-gray-700 hover:shadow-lg
     }
 
     .button{
         @apply p-1 my-4 border border-solid bg-gray-400 rounded-xl
+        hover:bg-gray-500 hover:shadow-lg border-none
     }
 
     .container_calcular{
-        @apply py-4 px-3 flex flex-col rounded-xl lg:mx-4 lg:w-2/4
+        @apply py-4 px-3 flex flex-col rounded-xl lg:mx-4 lg:w-2/4 
     }
 
 }

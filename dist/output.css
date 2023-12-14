@@ -563,7 +563,16 @@ video {
 @media (min-width: 1024px) {
   .container_form {
     display: flex;
-    width: 83.333333%;
+    width: 80%;
+  }
+
+  .container_form > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .container_form {
     --tw-bg-opacity: 1;
     background-color: rgb(249 115 22 / var(--tw-bg-opacity));
     padding: 0.75rem;
@@ -629,16 +638,13 @@ video {
   display: flex;
   flex-direction: column;
   border-radius: 0.75rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+  padding-top: 1rem;
 }
 
 @media (min-width: 1024px) {
   .container_calcular {
-    margin-left: 1rem;
-    margin-right: 1rem;
     width: 50%;
   }
 }
@@ -648,9 +654,9 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mt-2 {
@@ -661,12 +667,20 @@ video {
   margin-top: 6rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .flex {
   display: flex;
+}
+
+.h-0 {
+  height: 0px;
 }
 
 .h-40 {
@@ -716,13 +730,18 @@ video {
   font-family: Poppins, sans-serif;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -742,10 +761,6 @@ video {
 
   .lg\:flex {
     display: flex;
-  }
-
-  .lg\:h-0 {
-    height: 0px;
   }
 
   .lg\:h-20 {

@@ -72,7 +72,7 @@ btn_calcular_contratoNovo.addEventListener('click', (event) => {
 
     //calculo de meses restantes
     tilulo_historico_contratoNovo.innerHTML = `<h4 class="my-1">Histórico para os boletos:</h4>`
-    texto_paraHistorico_contratoNovo.innerHTML = `<p>Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.</p>`
+    texto_paraHistorico_contratoNovo.innerHTML = `Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.`
 
 
     //Resultado da formula

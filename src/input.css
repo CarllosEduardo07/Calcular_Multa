@@ -38,4 +38,28 @@
         @apply pt-4 px-3 rounded-xl flex flex-col lg:w-1/2  
     }
 
+    .passar_mouse {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .mostrar {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 0.5em;
+        top: -700%;
+        left: -110%;/* Posiciona acima do elemento pai */
+        border-radius: 10px;
+        user-select: text; 
+    }
+
+    .passar_mouse:hover .mostrar {
+        display: block;
+        opacity: 0.9;
+        visibility: visible;
+    }
 }

@@ -73,16 +73,26 @@
 
             <div class="h-60 flex flex-col lg:h-50">
                 
-                <div class="h-0">
+                <div class="h-20">
                     <span id="tilulo_historico_contratoNovo" class="text-lg font-bold text-center"></span>
                     <span id="texto_paraHistorico_contratoNovo"></span>
                 </div>
                 
-                <div>
-                    <h3 class="font-bold mt-28 lg:mt-24">Fórmula:</h3>
-                    <span>M = (VTB &#247; MF) &#215; MR</span>
+       
+                    <h3 class="font-bold mt-4 lg:mt-5">Fórmula:</h3>
+                    <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
+                    <div class="passar_mouse">M = (VTB &#247; MF) &#215; MR
+                        <div class="mostrar">
+                            <strong>M</strong> = (VTB ÷ MF) × MR<br>
+                            <strong>M</strong> = Valor total da Multa a ser paga pelo ASSINANTE.<br>
+                            <strong>VTB</strong> = Valor total dos benefícios concedidos ao ASSINANTE.<br>
+                            <strong>MF</strong> = Número total dos meses de fidelidade contratual previsto na cláusula 3.1 deste
+                            instrumento.<br>
+                            <strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual antecipada.<br>
+                        </div>
+                    </div>
                     <p id="resultado_formula" class="mt-2"></p>
-                </div>
+            
             </div>
         </div> 
     </form>

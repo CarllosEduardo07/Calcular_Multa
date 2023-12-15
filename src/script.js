@@ -51,6 +51,13 @@ function idetificar_mes_fidelidade(porcentagem){
 //calcular Antigo Contrato
 btn_calcular_contratoAntigo.addEventListener('click', (event) => {
     event.preventDefault()
+
+    if(valor_multa_contratoAntigo.value === ""){
+        return alert("Digite o valor do beneficio do cliente no Contrato Antigo");
+    }else if(Porcentagem_fidelidade.value === ""){
+        return alert("Selecione a quantia de meses Pago no Contrato Antigo");
+    }
+
     const resultado_multa_contratoAntigo = (valor_multa_contratoAntigo.value * Porcentagem_fidelidade.value) / 100;
 
     const tilulo_historico_contratoAntigo = document.querySelector('#tilulo_historico_contratoAntigo');
@@ -64,6 +71,12 @@ btn_calcular_contratoAntigo.addEventListener('click', (event) => {
 //calcular Novo Contrato
 btn_calcular_contratoNovo.addEventListener('click', (event) => {
     event.preventDefault()
+
+    if(vtb_valor_multa_contratoNovo.value === ""){
+        return alert("Digite o valor do beneficio do cliente no Contrato Novo");
+    }else if(mr_mes_restante.value === ""){
+        return alert("Selecione a quantidade de meses para encerrar o Contrato Novo");
+    }
 
     const resultado_multa_e_mes = (vtb_valor_multa_contratoNovo.value / mf_mes_fidelidade) * mr_mes_restante.value;
 

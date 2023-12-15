@@ -12,8 +12,8 @@
         /* xl:1280px */
         /* 2xl:1536px */
         sm:mx-20 
-        lg:flex lg:p-3 lg:w-4/5  lg:space-x-6
-        xl:w-3/5 
+        lg:flex lg:p-3 lg:w-3/5  lg:space-x-6
+        xl:w-2/4 
        
     }
 
@@ -38,28 +38,19 @@
         @apply pt-4 px-3 rounded-xl flex flex-col lg:w-1/2  
     }
 
-    .passar_mouse {
-        position: relative;
-        display: inline-block;
+    /* informações formula */
+    .formula {
+        @apply relative 
     }
     
-    .mostrar {
-        display: none;
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        padding: 0.5em;
-        top: -700%;
-        left: -110%;/* Posiciona acima do elemento pai */
-        border-radius: 10px;
-        user-select: text; 
+    .informacoes_formula {
+        top: -1100%;
+        right: -105%;
+
+        @apply hidden lg:hidden lg:absolute lg:z-10 lg:w-full lg:bg-gray-700 lg:text-white lg:p-2 lg:rounded-xl lg:select-text	lg:text-justify
     }
 
-    .passar_mouse:hover .mostrar {
-        display: block;
-        opacity: 0.9;
-        visibility: visible;
+    .formula:hover .informacoes_formula {
+        @apply lg:block lg:opacity-90 lg:visible
     }
 }

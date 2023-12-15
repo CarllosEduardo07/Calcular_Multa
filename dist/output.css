@@ -561,7 +561,7 @@ video {
 @media (min-width: 1024px) {
   .container_form {
     display: flex;
-    width: 80%;
+    width: 60%;
   }
 
   .container_form > :not([hidden]) ~ :not([hidden]) {
@@ -577,7 +577,7 @@ video {
 
 @media (min-width: 1280px) {
   .container_form {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -643,32 +643,41 @@ video {
   }
 }
 
-.passar_mouse {
+/* informações formula */
+
+.formula {
   position: relative;
-  display: inline-block;
 }
 
-.mostrar {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em;
-  top: -700%;
-  left: -110%;
-  /* Posiciona acima do elemento pai */
-  border-radius: 10px;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
+.informacoes_formula {
+  top: -1100%;
+  right: -105%;
+  display: none
 }
 
-.passar_mouse:hover .mostrar {
-  display: block;
-  opacity: 0.9;
-  visibility: visible;
+@media (min-width: 1024px) {
+  .informacoes_formula {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+            user-select: text;
+    border-radius: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+    padding: 0.5rem;
+    text-align: justify;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .formula:hover .informacoes_formula {
+    visibility: visible;
+    display: block;
+    opacity: 0.9;
+  }
 }
 
 .my-1 {
@@ -689,12 +698,12 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .flex {
@@ -777,8 +786,8 @@ video {
     margin-bottom: 0.5rem;
   }
 
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
+  .lg\:mt-7 {
+    margin-top: 1.75rem;
   }
 
   .lg\:flex {

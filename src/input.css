@@ -3,18 +3,35 @@
 @tailwind utilities;
 
 @layer components{   
+ 
 
     .container_form{
-        @apply mx-3 rounded-xl bg-white shadow-xl
+    
         /* sm:640px */
         /* md:768px */
         /* lg:1024px */
         /* xl:1280px */
         /* 2xl:1536px */
-        sm:mx-20 
-        lg:flex lg:p-3 lg:w-3/5  lg:space-x-6
-        xl:w-2/4 
-       
+
+        @apply lg:h-full lg:w-full lg:flex lg:justify-center 
+    }
+    
+    .titulo{
+        @apply my-3 text-center text-xl font-bold 
+    }
+    
+    .container_calculadoras{
+        @apply mt-10 p-3 lg:flex lg:flex-col lg:bg-blue-500 lg:w-1/4 lg:h-5/6 xl:w-1/4 rounded-xl xl:bg-green-500 
+    }
+    label{
+        @apply mt-2 mb-1 ml-2
+    }
+
+
+
+
+    .titulo_historico{
+        @apply text-base font-bold text-center
     }
 
     /* tirar setar do input number */
@@ -23,20 +40,18 @@
         margin: 0;
     }
 
-    .input {
-        @apply p-1 border border-solid border-2 border-gray-400 outline-none rounded-xl
+    input, select {
+        @apply p-1 border border-solid border-2 border-gray-400 outline-none rounded-xl text-center 
         cursor-pointer
-        hover:border-gray-700 hover:shadow-lg
+        hover:border-gray-700 hover:shadow-lg 
     }
 
-    .button{
+    button{
         @apply p-1 my-3 border border-solid bg-gray-400 rounded-xl
         hover:bg-gray-500 hover:shadow-lg border-none
     }
 
-    .container_calcular{
-        @apply pt-4 px-3 rounded-xl flex flex-col lg:w-1/2  
-    }
+  
 
     /* informações formula */
     .formula {

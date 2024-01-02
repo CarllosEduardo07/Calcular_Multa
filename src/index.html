@@ -15,16 +15,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
-<body class="font-poppins text-base bg-gray-100 w-full h-full lg:h-screen lg:flex lg:justify-center lg:items-center ">
+<body class="font-poppins text-sm w-screen h-screen">
     <form class="container_form">
 
-        <div class="container_calcular bg-gray-200">
-            <h2 class="my-4 text-center text-xl font-bold lg:my-2">Calcular contratos Antigos</h2>
+        <div class="container_calculadoras bg-red-400">
+            <h2 class="titulo">Calcular contratos Antigos</h2>
 
-            <label for="valor_multa_contratoAntigo" class="my-1">Valor do Benefício do Cliente:</label>
-            <input type="number" id="valor_multa_contratoAntigo" placeholder="Valor do Benefício no Contrato" class="input text-center input_number" autocomplete="off">
-            <label for="Porcentagem_fidelidade" class="mt-3">Selecione a quantia de <strong>meses Pago</strong> pelo Cliente:</label>
-            <select id="Porcentagem_fidelidade" class="input text-center">
+            <label for="valor_multa_contratoAntigo" class="">Valor do Benefício do Cliente:</label>
+            <input type="number" id="valor_multa_contratoAntigo" class="input_number" placeholder="Valor do Benefício no Contrato" autocomplete="off">
+            <label for="Porcentagem_fidelidade" class="">Selecione a quantia de <strong>meses Pago</strong> pelo Cliente:</label>
+            <select id="Porcentagem_fidelidade">
                 <option value="">Selecione o mês</option>
                 <option value="90">1 mês - 90%</option>
                 <option value="85">2 mês - 85%</option>
@@ -40,23 +40,23 @@
                 <option value="35">12 mês - 35%</option>
             </select>
 
-            <button id="btn_calcular_contratoAntigo" class="button">Calcular</button>
+            <button id="btn_calcular_contratoAntigo">Calcular</button>
 
-            <div class="h-40 lg:h-20">
-                <span id="tilulo_historico_contratoAntigo" class="text-lg font-bold text-center"></span>
+            <div class="mt-4">
+                <span id="tilulo_historico_contratoAntigo" class="titulo_historico"></span>
                 <span id="texto_paraHistorico_contratoAntigo"></span>
             </div>
         </div>
 
-        <div class="container_calcular bg-white">
-            <h2 class="my-4 text-center text-xl font-bold lg:my-2">Calcular contratos Novos</h2>
+        <div class="container_calculadoras">
+            <h2 class="titulo">Calcular contratos Novos</h2>
         
-            <label for="vtb_valor_multa_contratoNovo" class="my-1">Valor do Benefício do Cliente:</label>
-            <input type="number" id="vtb_valor_multa_contratoNovo" placeholder="Valor do Benefício no Contrato" class="input text-center input_number" autocomplete="off">
-            <label for="mes_fidelidade" class="mt-3">Número total dos meses de Fidelidade:</label>
-            <input type="number" id="mes_fidelidade" value="12" disabled class="input text-center cursor-not-allowed">
-            <label for="mr_mes_restante" class="mt-3">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade</label>
-            <select id="mr_mes_restante" class="input text-center">
+            <label for="vtb_valor_multa_contratoNovo" class="">Valor do Benefício do Cliente:</label>
+            <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato"  autocomplete="off">
+            <label for="mes_fidelidade" class="">Número total dos meses de Fidelidade:</label>
+            <input type="number" id="mes_fidelidade" value="12" disabled class="cursor-not-allowed">
+            <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade:</label>
+            <select id="mr_mes_restante">
                 <option value="">Selecione o mês</option>
                 <option value="1">1 mes</option>
                 <option value="2">2 mes</option>
@@ -71,16 +71,16 @@
                 <option value="11">11 mes</option>
                 <option value="12">12 mes</option>
             </select>
-            <button id="btn_calcular_contratoNovo" class="button">Calcular</button>
+            <button id="btn_calcular_contratoNovo">Calcular</button>
 
-            <div class="h-60 flex flex-col lg:h-50">
+            <div class="">
                 
-                <div class="h-20">
-                    <span id="tilulo_historico_contratoNovo" class="text-lg font-bold text-center"></span>
+                <div class="">
+                    <span id="tilulo_historico_contratoNovo" class=""></span>
                     <span id="texto_paraHistorico_contratoNovo"></span>
                 </div>
 
-                    <h3 class="font-bold mt-6 lg:mt-7">Fórmula:</h3>
+                    <h3 class="font-bold">Fórmula:</h3>
                     <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
                     <div class="formula">M = (VTB &#247; MF) &#215; MR
                         <div class="informacoes_formula">
@@ -92,7 +92,7 @@
                             <strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual antecipada.<br>
                         </div>
                     </div>
-                    <p id="resultado_formula" class="mt-2"></p>
+                    <p id="resultado_formula" class=""></p>
             </div>
         </div> 
     </form>

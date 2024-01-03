@@ -15,10 +15,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
-<body class="font-poppins text-sm w-screen h-screen">
+<body class="font-poppins text-sm w-full min-h-screen bg-slate-800 text-white">
     <form class="container_form">
 
-        <div class="container_calculadoras bg-red-400">
+        <div class="container_calculadoras">
             <h2 class="titulo">Calcular contratos Antigos</h2>
 
             <label for="valor_multa_contratoAntigo" class="">Valor do Benefício do Cliente:</label>
@@ -42,7 +42,7 @@
 
             <button id="btn_calcular_contratoAntigo">Calcular</button>
 
-            <div class="mt-4">
+            <div class="container_resultado">
                 <span id="tilulo_historico_contratoAntigo" class="titulo_historico"></span>
                 <span id="texto_paraHistorico_contratoAntigo"></span>
             </div>
@@ -52,7 +52,7 @@
             <h2 class="titulo">Calcular contratos Novos</h2>
         
             <label for="vtb_valor_multa_contratoNovo" class="">Valor do Benefício do Cliente:</label>
-            <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato"  autocomplete="off">
+            <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato"  autocomplete="off" value="600.60">
             <label for="mes_fidelidade" class="">Número total dos meses de Fidelidade:</label>
             <input type="number" id="mes_fidelidade" value="12" disabled class="cursor-not-allowed">
             <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade:</label>
@@ -62,7 +62,7 @@
                 <option value="2">2 mes</option>
                 <option value="3">3 mes</option>
                 <option value="4">4 mes</option>
-                <option value="5">5 mes</option>
+                <option value="5" selected>5 mes</option>
                 <option value="6">6 mes</option>
                 <option value="7">7 mes</option>
                 <option value="8" >8 mes</option>
@@ -73,27 +73,33 @@
             </select>
             <button id="btn_calcular_contratoNovo">Calcular</button>
 
-            <div class="">
-                
-                <div class="">
-                    <span id="tilulo_historico_contratoNovo" class=""></span>
-                    <span id="texto_paraHistorico_contratoNovo"></span>
+            <div>               
+            <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
+                <div class="formula">
+                    <div class="container_icon_info">
+                        
+                        <span class="material-symbols-outlined icon_info ">info</span>
+                    </div>
+
+                    <div class="informacoes_formula">
+                        <span><strong>M</strong> = (VTB ÷ MF) × MR</span><br>
+                        <span><strong>M</strong> = Valor total da Multa a ser paga pelo ASSINANTE.</span><br>
+                        <span><strong>VTB</strong> = Valor total dos benefícios concedidos ao ASSINANTE.</span><br>
+                        <span><strong>MF</strong> = Número total dos meses de fidelidade contratual previsto na cláusula 3.1 deste
+                        instrumento.</span><br>
+                        <span><strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual antecipada.</span><br>
+                    </div>
                 </div>
 
-                    <h3 class="font-bold">Fórmula:</h3>
-                    <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
-                    <div class="formula">M = (VTB &#247; MF) &#215; MR
-                        <div class="informacoes_formula">
-                            <strong>M</strong> = (VTB ÷ MF) × MR<br>
-                            <strong>M</strong> = Valor total da Multa a ser paga pelo ASSINANTE.<br>
-                            <strong>VTB</strong> = Valor total dos benefícios concedidos ao ASSINANTE.<br>
-                            <strong>MF</strong> = Número total dos meses de fidelidade contratual previsto na cláusula 3.1 deste
-                            instrumento.<br>
-                            <strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual antecipada.<br>
-                        </div>
-                    </div>
+                <div class="container_resultado">
+                    <span id="tilulo_historico_contratoNovo" class="titulo_historico"></span>
+                    <span id="texto_paraHistorico_contratoNovo"></span>
                     <p id="resultado_formula" class=""></p>
+                </div>
             </div>
         </div> 
     </form>
+    <footer>
+        <span class="rodape">Desenvolvido Por Carlos Eduardo Albuquerque</span>
+    </footer>
 </html>

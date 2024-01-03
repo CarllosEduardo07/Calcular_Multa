@@ -546,20 +546,19 @@ video {
   /* lg:1024px */
   /* xl:1280px */
   /* 2xl:1536px */
+  height: 100%
 }
 
 @media (min-width: 1024px) {
   .container_form {
     display: flex;
-    height: 100%;
-    width: 100%;
     justify-content: center;
   }
 }
 
 .titulo {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -567,32 +566,27 @@ video {
 }
 
 .container_calculadoras {
-  margin-top: 2.5rem;
-  border-radius: 0.75rem;
-  padding: 0.75rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 1024px) {
   .container_calculadoras {
     display: flex;
-    height: 83.333333%;
-    width: 25%;
+    width: 33.333333%;
     flex-direction: column;
-    --tw-bg-opacity: 1;
-    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
   }
 }
 
 @media (min-width: 1280px) {
   .container_calculadoras {
     width: 25%;
-    --tw-bg-opacity: 1;
-    background-color: rgb(34 197 94 / var(--tw-bg-opacity));
   }
 }
 
 label {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.25rem;
   margin-left: 0.5rem;
 }
@@ -613,35 +607,48 @@ label {
 
 input, select {
   cursor: pointer;
-  border-radius: 0.75rem;
-  border-width: 2px;
+  border-radius: 0.5rem;
+  border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
-  padding: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
 input:hover, select:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+input:focus, select:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+@media (min-width: 1024px) {
+  input, select {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
 button {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   border-radius: 0.75rem;
   border-width: 1px;
   border-style: solid;
   border-style: none;
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-  padding: 0.25rem;
 }
 
 button:hover {
@@ -652,6 +659,23 @@ button:hover {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media (min-width: 1024px) {
+  button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.container_icon_info {
+  position: absolute;
+  right: 0px;
+}
+
+/* .container_resultado{
+        @apply 
+    } */
+
 /* informações formula */
 
 .formula {
@@ -659,7 +683,7 @@ button:hover {
 }
 
 .informacoes_formula {
-  top: -1100%;
+  bottom: 100%;
   right: -105%;
   display: none
 }
@@ -689,34 +713,61 @@ button:hover {
   }
 }
 
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-.mt-4 {
+/* .rodape{
+        @apply 
+    } */
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-4 {
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.h-screen {
-  height: 100vh;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
-.w-screen {
-  width: 100vw;
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .cursor-not-allowed {
   cursor: not-allowed;
 }
 
-.bg-red-400 {
+.bg-slate-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .font-poppins {
   font-family: Poppins, sans-serif;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-sm {
@@ -726,4 +777,9 @@ button:hover {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }

@@ -63,8 +63,8 @@ btn_calcular_contratoAntigo.addEventListener('click', (event) => {
     const tilulo_historico_contratoAntigo = document.querySelector('#tilulo_historico_contratoAntigo');
     const texto_paraHistorico_contratoAntigo = document.querySelector('#texto_paraHistorico_contratoAntigo');
 
-    tilulo_historico_contratoAntigo.innerHTML = `<h4 class="my-1">Histórico para os boletos:</h4>`
-    texto_paraHistorico_contratoAntigo.innerHTML = `Gerar multa no valor de <strong>${formatarValor(resultado_multa_contratoAntigo)}</strong>, cliente usou ${idetificar_mes_fidelidade(Porcentagem_fidelidade.value)} meses - deverá arcar com uma <strong>multa de ${Porcentagem_fidelidade.value}%</strong> do total dos benefícios concedidos.`;
+    tilulo_historico_contratoAntigo.innerHTML = `<h4 class="my-4">Histórico para os boletos:</h4>`
+    texto_paraHistorico_contratoAntigo.innerHTML = `<p>Gerar multa no valor de <strong>${formatarValor(resultado_multa_contratoAntigo)}</strong>, cliente usou ${idetificar_mes_fidelidade(Porcentagem_fidelidade.value)} meses - deverá arcar com uma <strong>multa de ${Porcentagem_fidelidade.value}%</strong> do total dos benefícios concedidos.</p>`;
 });
 
 
@@ -84,16 +84,21 @@ btn_calcular_contratoNovo.addEventListener('click', (event) => {
     const texto_paraHistorico_contratoNovo = document.querySelector('#texto_paraHistorico_contratoNovo');
 
     //calculo de meses restantes
-    tilulo_historico_contratoNovo.innerHTML = `<h4 class="my-1">Histórico para os boletos:</h4>`
-    texto_paraHistorico_contratoNovo.innerHTML = `Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.`
-
+    tilulo_historico_contratoNovo.innerHTML = `<h4>Histórico para os boletos:</h4>`
+    texto_paraHistorico_contratoNovo.innerHTML = `<p class="mt-2">Gerar multa no valor de <strong>${formatarValor(resultado_multa_e_mes)}</strong>, falta ${mr_mes_restante.value} meses para encerrar a fidelidade.</p>`
 
     //Resultado da formula
     let resultado = document.querySelector('#resultado_formula');
 
-    resultado.innerHTML = `<h4><strong>Resultado da fórmula</strong>:</h4>
-    M = (${vtb_valor_multa_contratoNovo.value} &#247; ${mf_mes_fidelidade}) &#215; ${mr_mes_restante.value}
-    <br>
-    M =  ${formatarValor(resultado_multa_e_mes)}`;
+    resultado.innerHTML = `
+    <h3 class="text-base font-bold mt-2">Fórmula:</h3>
+    <p>M = (VTB &#247; MF) &#215; MR</p>
+    <h4 class="my-2"><strong>Resultado da Fórmula</strong>:</h4>
+    <p>
+        M = (${vtb_valor_multa_contratoNovo.value} &#247; ${mf_mes_fidelidade}) &#215; ${mr_mes_restante.value}
+        <br>
+        M =  ${formatarValor(resultado_multa_e_mes)}
+    </p>
+    `;
 });
 

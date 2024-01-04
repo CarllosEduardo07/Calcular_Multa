@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Multa</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./script.js" defer></script>
@@ -23,7 +24,7 @@
 
             <label for="valor_multa_contratoAntigo" class="">Valor do Benefício do Cliente:</label>
             <input type="number" id="valor_multa_contratoAntigo" class="input_number" placeholder="Valor do Benefício no Contrato" autocomplete="off">
-            <label for="Porcentagem_fidelidade" class="">Selecione a quantia de <strong>meses Pago</strong> pelo Cliente:</label>
+            <label for="Porcentagem_fidelidade" class="">Selecione o mês com base na Assinatura do Contrato ou Alteração de Assinatura:</label>
             <select id="Porcentagem_fidelidade">
                 <option value="">Selecione o mês</option>
                 <option value="90">1 mês - 90%</option>
@@ -55,7 +56,7 @@
             <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato"  autocomplete="off">
             <label for="mes_fidelidade" class="">Número total dos meses de Fidelidade:</label>
             <input type="number" id="mes_fidelidade" value="12" disabled class="cursor-not-allowed">
-            <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade:</label>
+            <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade com base na <stor>Assinatura do Contrato</stor> ou <stor>Alteração de Assinatura</stor>:</label>
             <select id="mr_mes_restante">
                 <option value="">Selecione o mês</option>
                 <option value="1">1 mes</option>

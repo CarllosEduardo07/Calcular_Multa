@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcular Multa</title>
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link href="/dist/output.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- <link href="/dist/output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="./script.js" defer></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-</head>
-<body class="font-poppins text-sm w-full min-h-screen bg-slate-800 text-white lg:flex lg:flex-col justify-between">
-    <form class="container_form">
+  </head>
+  <body class="font-poppins text-sm w-full min-h-screen bg-slate-800 text-white flex flex-col justify-start items-center">
+    <form class="space-y-3 flex flex-col mt-2 px-2 w-[600px]">
+      <h2 class="my-2 text-center text-xl font-bold">Calcular contratos</h2>
 
+      <label for="vtb_valor_multa_contratoNovo" class="">Valor do Benefício do Cliente:</label>
+      <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato" autocomplete="off" />
 
-        <div class="container_calculadoras">
-            <h2 class="titulo">Calcular contratos Novos</h2>
-        
-            <label for="vtb_valor_multa_contratoNovo" class="">Valor do Benefício do Cliente:</label>
-            <input type="number" id="vtb_valor_multa_contratoNovo" class="input_number" placeholder="Valor do Benefício no Contrato"  autocomplete="off">
-            <label for="mes_fidelidade">Número total dos meses de Fidelidade:</label>
-            <input type="number" id="mes_fidelidade" value="12" disabled class="cursor-not-allowed">
-            <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade incluindo o mês na Assinatura do Contrato ou Alteração de Contrato:</label>
-            <select id="mr_mes_restante">
-                <option value="">Selecione o mês</option>
-                <option value="1">1 mes</option>
-                <option value="2">2 mes</option>
-                <option value="3">3 mes</option>
-                <option value="4">4 mes</option>
-                <option value="5">5 mes</option>
-                <option value="6">6 mes</option>
-                <option value="7">7 mes</option>
-                <option value="8">8 mes</option>
-                <option value="9">9 mes</option>
-                <option value="10">10 mes</option>
-                <option value="11">11 mes</option>
-                <option value="12">12 mes</option>
-            </select>
+      <label for="mes_fidelidade">Número total dos meses de Fidelidade:</label>
+      <input type="number" id="mes_fidelidade" value="12" disabled class="cursor-not-allowed" />
 
-            <label for="diasRestante">Dias Restante</label>
-            <input type="number" id="diasRestante" value="11">
+      <label for="mr_mes_restante" class="">Selecione a quantidade de <strong>meses para encerrar</strong> a Fidelidade incluindo o mês na Assinatura do Contrato ou Alteração de Contrato:</label>
+      <select id="mr_mes_restante">
+        <option value="">Selecione o mês</option>
+        <option value="1">1 mês</option>
+        <option value="2">2 mês</option>
+        <option value="3">3 mês</option>
+        <option value="4">4 mês</option>
+        <option value="5">5 mês</option>
+        <option value="6">6 mês</option>
+        <option value="7">7 mês</option>
+        <option value="8">8 mês</option>
+        <option value="9">9 mês</option>
+        <option value="10">10 mês</option>
+        <option value="11">11 mês</option>
+        <option value="12">12 mês</option>
+      </select>
 
-            <button id="btn_calcular_contratoNovo">Calcular</button>
+      <label for="diasRestante">Quantidade de <strong>dias</strong>:</label>
+      <select id="diasRestante" placeholder="Quantidade de dias">
+        <option value="">Selecione o dia</option>
+        <option value="0">0 Dias</option>
+        <option value="1">1 Dias</option>
+        <option value="2">2 Dias</option>
+        <option value="3">3 Dias</option>
+        <option value="4">4 Dias</option>
+        <option value="5">5 Dias</option>
+        <option value="6">6 Dias</option>
+        <option value="7">7 Dias</option>
+        <option value="8">8 Dias</option>
+        <option value="9">9 Dias</option>
+        <option value="10">10 Dias</option>
+        <option value="11">11 Dias</option>
+        <option value="12">12 Dias</option>
+        <option value="13">13 Dias</option>
+        <option value="14">14 Dias</option>
+        <option value="15">15 Dias</option>
+        <option value="16">16 Dias</option>
+        <option value="17">17 Dias</option>
+        <option value="18">18 Dias</option>
+        <option value="19">19 Dias</option>
+        <option value="20">20 Dias</option>
+        <option value="21">21 Dias</option>
+        <option value="22">22 Dias</option>
+        <option value="23">23 Dias</option>
+        <option value="24">24 Dias</option>
+        <option value="25">25 Dias</option>
+        <option value="26">26 Dias</option>
+        <option value="27">27 Dias</option>
+        <option value="28">28 Dias</option>
+        <option value="29">29 Dias</option>
+        <option value="30">30 Dias</option>
+        <option value="31">31 Dias</option>
+      </select>
 
-            <div>               
-            <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
-                <div class="formula">
-                    <div class="container_icon_info">
-                        
-                        <span class="material-symbols-outlined icon_info ">info</span>
-                    </div>
+      <button id="btn_calcular_contratoNovo">Calcular</button>
 
-                    <div class="informacoes_formula">
-                        <span><strong>M</strong> = (VTB ÷ MF) × MR</span><br>
-                        <span><strong>M</strong> = Valor total da Multa a ser paga pelo ASSINANTE.</span><br>
-                        <span><strong>VTB</strong> = Valor total dos benefícios concedidos ao ASSINANTE.</span><br>
-                        <span><strong>MF</strong> = Número total dos meses de fidelidade contratual previsto na cláusula 3.1 deste
-                        instrumento.</span><br>
-                        <span><strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual antecipada.</span><br>
-                    </div>
-                </div>
+      <div>
+        <!-- <span>M = (VTB &#247; MF) &#215; MR</span> -->
+        <div class="formula">
+          <div class="container_icon_info">
+            <span class="material-symbols-outlined icon_info">info</span>
+          </div>
 
-                <div class="container_resultado">
-                    <span id="tilulo_historico_contratoNovo" class="titulo_historico"></span>
-                    <span id="texto_paraHistorico_contratoNovo"></span>
-                    <p id="resultado_formula" class=""></p>
-                </div>
-            </div>
-        </div> 
+          <div class="informacoes_formula">
+            <span><strong>M</strong> = (VTB ÷ MF) × MR</span><br />
+            <span><strong>M</strong> = Valor total da Multa a ser paga pelo ASSINANTE.</span><br />
+            <span><strong>VTB</strong> = Valor total dos benefícios concedidos ao ASSINANTE.</span><br />
+            <span><strong>MF</strong> = Número total dos meses de fidelidade contratual previsto na cláusula 3.1 deste instrumento.</span><br />
+            <span
+              ><strong>MR</strong> = Número total de meses restantes para se completar o prazo de fidelidade contratual, de acordo com o momento em que o ASSINANTE solicitou a rescisão contratual
+              antecipada.</span
+            ><br />
+          </div>
+        </div>
+      </div>
     </form>
 
+    <div class="w-full flex items-center justify-center">
+      <div>
+        <span id="tilulo_historico_contratoNovo" class="text-base font-bold text-center"></span>
+        <span id="texto_paraHistorico_contratoNovo"></span>
+
+        <div class="h-[145px] grid grid-cols-2 place-items-baseline items-start mt-3">
+          <div id="resultado_formula"></div>
+          <div id="resultado_formula_dias"></div>
+        </div>
+        <div id="valorFinal" class="w-full mt-2 font-semibold text-center"></div>
+      </div>
+    </div>
+
+    <!-- 
 <footer class="text-center w-full p-4 font-semibold text-base ">
     <span class="text-zinc-200">Desenvolvido Por Carlos Eduardo Albuquerque</span>
-</footer>
+
+</footer> -->
+  </body>
 </html>

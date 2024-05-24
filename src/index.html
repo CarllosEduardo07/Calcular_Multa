@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Multa</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <script src="./script.js" defer></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -19,35 +19,6 @@
 <body class="font-poppins text-sm w-full min-h-screen bg-slate-800 text-white lg:flex lg:flex-col justify-between">
     <form class="container_form">
 
-        <div class="container_calculadoras">
-            <h2 class="titulo">Calcular contratos Antigos</h2>
-
-            <label for="valor_multa_contratoAntigo" class="">Valor do Benefício do Cliente:</label>
-            <input type="number" id="valor_multa_contratoAntigo" class="input_number" placeholder="Valor do Benefício no Contrato" autocomplete="off">
-            <label for="Porcentagem_fidelidade">Selecione a quantidade de <strong>meses Pago</strong>, incluindo o mês da Assinatura do Contrato ou Alteração de Contrato:</label>
-            <select id="Porcentagem_fidelidade">
-                <option value="">Selecione o mês</option>
-                <option value="90">1 mês - 90%</option>
-                <option value="85">2 mês - 85%</option>
-                <option value="80">3 mês - 80%</option>
-                <option value="75">4 mês - 75%</option>
-                <option value="70">5 mês - 70%</option>
-                <option value="65">6 mês - 65%</option>
-                <option value="60">7 mês - 60%</option>
-                <option value="55">8 mês - 55%</option>
-                <option value="50">9 mês - 50%</option>
-                <option value="45">10 mês - 45%</option>
-                <option value="40">11 mês - 40%</option>
-                <option value="35">12 mês - 35%</option>
-            </select>
-
-            <button id="btn_calcular_contratoAntigo">Calcular</button>
-
-            <div class="container_resultado">
-                <span id="tilulo_historico_contratoAntigo" class="titulo_historico"></span>
-                <span id="texto_paraHistorico_contratoAntigo"></span>
-            </div>
-        </div>
 
         <div class="container_calculadoras">
             <h2 class="titulo">Calcular contratos Novos</h2>
@@ -72,6 +43,10 @@
                 <option value="11">11 mes</option>
                 <option value="12">12 mes</option>
             </select>
+
+            <label for="diasRestante">Dias Restante</label>
+            <input type="number" id="diasRestante" value="11">
+
             <button id="btn_calcular_contratoNovo">Calcular</button>
 
             <div>               

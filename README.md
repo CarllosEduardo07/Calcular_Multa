@@ -8,7 +8,7 @@
 
 <h2 id="about">📌 Sobre</h2>
 <p>Calculadora desenvolvida para auxiliar o Funcionários da empresa a fazer o Calculo de forma mais Simples e eficiente. (Versão 1.0)</p>
-<p><strong>OBS:</strong> O projeto ja esta na <strong>Versão 2.0 <a href="https://calcularmulta.vercel.app/" target="_blank">DEMO</a> </strong>, por que a forma de calcular multa foi atualizada, o Código dessa versão nao estar disponivel.</p>
+<p><strong>OBS:</strong> O projeto ja esta na <strong>Versão 2.0 <a href="https://calcularmulta.vercel.app/" target="_blank">DEMO</a></strong>, por que a forma de calcular multa foi atualizada, o Código dessa versão nao estar disponivel.</p>
 
 <h2 id="stacks">🚀 Tecnologias Utilizadas</h2>
 
@@ -30,7 +30,7 @@ ng add @angular/material
 ```
 
  
-<h2 id="calculadora_versao_V2">Demostração da Versão 2.0</h2>
+<h2 id="calculadora_versao_V2">Demostração da Versão 2.0, <a href="https://calcularmulta.vercel.app/" target="_blank">DEMO</a></h2>
 
 ![calcular_multa1](https://github.com/CarllosEduardo07/Calcular_Multa_V1/assets/80606019/9cf54825-94df-4dd6-a146-1ddcdba3688e)
 
